@@ -1,3 +1,8 @@
+
+
+#La complejidad es n 
+
+
 import sqlite3
 import requests
 import time
@@ -53,7 +58,7 @@ def mostrar_pokemones():
 # Modificar un Pokémon
 def modificar_pokemon():
     mostrar_pokemones()
-    id_pokemon = input("🔧 Introduce el ID del Pokémon que deseas modificar: ")
+    id_pokemon = input(" Introduce el ID del Pokémon que deseas modificar: ")
 
     cursor.execute("SELECT * FROM pokemons WHERE id = ?", (id_pokemon,))
     pokemon = cursor.fetchone()
@@ -79,9 +84,7 @@ def modificar_pokemon():
     else:
         print(" No se encontró ningún Pokémon con ese ID.")
 
-# -------------------------------------
-# Bloque principal con medición de tiempo
-# -------------------------------------
+
 if __name__ == "__main__":
     # Medir tiempo real con time
     inicio = time.time()
